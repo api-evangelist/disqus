@@ -61,7 +61,7 @@ common:
     url: https://disqus.com/api/docs/auth/
   - type: Pricing
     url: https://disqus.com/pricing/
-  - type: Sign Up
+  - type: SignUp
     url: https://disqus.com/profile/signup/
   - type: Login
     url: https://disqus.com/profile/login/
@@ -71,11 +71,11 @@ common:
     url: https://help.disqus.com/en/articles/1717104-contacting-disqus
   - type: Blog
     url: https://blog.disqus.com/
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://help.disqus.com/en/articles/1717103-disqus-privacy-policy
-  - type: Terms of Service
+  - type: TermsOfService
     url: https://help.disqus.com/en/articles/1717102-terms-of-service
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/disqus
   - type: X (Twitter)
     url: https://x.com/disqus
