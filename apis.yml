@@ -55,13 +55,13 @@ common:
     url: https://disqus.com
   - type: Documentation
     url: https://disqus.com/api/docs/
-  - type: Developer Portal
+  - type: DeveloperPortal
     url: https://disqus.com/api/applications/
   - type: Authentication
     url: https://disqus.com/api/docs/auth/
   - type: Pricing
     url: https://disqus.com/pricing/
-  - type: SignUp
+  - type: Signup
     url: https://disqus.com/profile/signup/
   - type: Login
     url: https://disqus.com/profile/login/

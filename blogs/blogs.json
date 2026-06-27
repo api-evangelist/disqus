@@ -2,11 +2,11 @@
   "repo": "disqus",
   "feeds": [
     {
-      "source": "https://blog.disqus.com/",
+      "source": "https://blog.disqus.com/rss.xml",
       "feed_url": "https://blog.disqus.com/rss.xml",
       "title": "",
       "saved": 0,
-      "method": "discovered"
+      "method": "feed"
     },
     {
       "source": "https://help.disqus.com/en/articles/1717104-contacting-disqus",
@@ -17,5 +17,5 @@
     }
   ],
   "post_count": 0,
-  "fetched": "2026-06-14T20:42:17Z"
+  "fetched": "2026-06-27T12:03:07Z"
 }
