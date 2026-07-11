@@ -1,0 +1,29 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/disqus-openapi.yml
+schemes:
+- name: oauth2
+  source: openapi/disqus-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://disqus.com/api/oauth/2.0/authorize/
+    tokenUrl: https://disqus.com/api/oauth/2.0/access_token/
+scopes:
+- scope: admin
+  description: Forum administration
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/disqus-openapi.yml
+- scope: read
+  description: Read forums, threads, posts
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/disqus-openapi.yml
+- scope: write
+  description: Create posts and threads
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/disqus-openapi.yml

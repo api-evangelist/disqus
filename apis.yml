@@ -51,6 +51,8 @@ apis:
         url: openapi/disqus-openapi.yml
 
 common:
+  - type: OAuthScopes
+    url: scopes/disqus-scopes.yml
   - type: Website
     url: https://disqus.com
   - type: Documentation
