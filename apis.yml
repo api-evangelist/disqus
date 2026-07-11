@@ -51,6 +51,10 @@ apis:
         url: openapi/disqus-openapi.yml
 
 common:
+  - type: DomainSecurity
+    url: security/disqus-domain-security.yml
+  - type: Authentication
+    url: authentication/disqus-authentication.yml
   - type: OAuthScopes
     url: scopes/disqus-scopes.yml
   - type: Website
