@@ -51,6 +51,8 @@ apis:
         url: openapi/disqus-openapi.yml
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/disqus-agentic-access.yml
   - type: DomainSecurity
     url: security/disqus-domain-security.yml
   - type: Authentication
