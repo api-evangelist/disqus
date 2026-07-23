@@ -1,0 +1,166 @@
+openapi: 3.1.0
+info:
+  title: Disqus Public Categories Forums API
+  description: REST API for Disqus comments, threads, forums, users, and categories. Read and write operations are authenticated using an API key and secret, with OAuth 2.0 access tokens for user-context operations. All endpoints are served under https://disqus.com/api/3.0/.
+  version: '3.0'
+servers:
+- url: https://disqus.com/api/3.0
+  description: Disqus API v3.0
+security:
+- apiKey: []
+- oauth2: []
+tags:
+- name: Forums
+paths:
+  /forums/details.json:
+    get:
+      tags:
+      - Forums
+      summary: Get forum details
+      operationId: forumsDetails
+      parameters:
+      - name: forum
+        in: query
+        required: true
+        schema:
+          type: string
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Forum details
+  /forums/create.json:
+    post:
+      tags:
+      - Forums
+      summary: Create a new forum
+      operationId: forumsCreate
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Created
+  /forums/update.json:
+    post:
+      tags:
+      - Forums
+      summary: Update forum details
+      operationId: forumsUpdate
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Updated
+  /forums/listThreads.json:
+    get:
+      tags:
+      - Forums
+      summary: List threads within a forum
+      operationId: forumsListThreads
+      parameters:
+      - name: forum
+        in: query
+        required: true
+        schema:
+          type: string
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Threads
+  /forums/listPosts.json:
+    get:
+      tags:
+      - Forums
+      summary: List posts within a forum
+      operationId: forumsListPosts
+      parameters:
+      - name: forum
+        in: query
+        required: true
+        schema:
+          type: string
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Posts
+  /forums/listModerators.json:
+    get:
+      tags:
+      - Forums
+      summary: List moderators on a forum
+      operationId: forumsListModerators
+      parameters:
+      - name: forum
+        in: query
+        required: true
+        schema:
+          type: string
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Moderators
+  /forums/addModerator.json:
+    post:
+      tags:
+      - Forums
+      summary: Add a moderator to a forum
+      operationId: forumsAddModerator
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Added
+  /forums/removeModerator.json:
+    post:
+      tags:
+      - Forums
+      summary: Remove a moderator from a forum
+      operationId: forumsRemoveModerator
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Removed
+  /forums/follow.json:
+    post:
+      tags:
+      - Forums
+      summary: Follow a forum
+      operationId: forumsFollow
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Followed
+  /forums/unfollow.json:
+    post:
+      tags:
+      - Forums
+      summary: Unfollow a forum
+      operationId: forumsUnfollow
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Unfollowed
+components:
+  parameters:
+    ApiKey:
+      name: api_key
+      in: query
+      schema:
+        type: string
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: query
+      name: api_key
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://disqus.com/api/oauth/2.0/authorize/
+          tokenUrl: https://disqus.com/api/oauth/2.0/access_token/
+          scopes:
+            read: Read forums, threads, posts
+            write: Create posts and threads
+            admin: Forum administration

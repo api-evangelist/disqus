@@ -1,0 +1,90 @@
+openapi: 3.1.0
+info:
+  title: Disqus Public Categories Threads API
+  description: REST API for Disqus comments, threads, forums, users, and categories. Read and write operations are authenticated using an API key and secret, with OAuth 2.0 access tokens for user-context operations. All endpoints are served under https://disqus.com/api/3.0/.
+  version: '3.0'
+servers:
+- url: https://disqus.com/api/3.0
+  description: Disqus API v3.0
+security:
+- apiKey: []
+- oauth2: []
+tags:
+- name: Threads
+paths:
+  /threads/details.json:
+    get:
+      tags:
+      - Threads
+      summary: Get thread details
+      operationId: threadsDetails
+      parameters:
+      - name: thread
+        in: query
+        required: true
+        schema:
+          type: string
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Thread details
+  /threads/create.json:
+    post:
+      tags:
+      - Threads
+      summary: Create a thread
+      operationId: threadsCreate
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Created
+  /threads/list.json:
+    get:
+      tags:
+      - Threads
+      summary: List threads
+      operationId: threadsList
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Threads
+  /threads/listPosts.json:
+    get:
+      tags:
+      - Threads
+      summary: List posts in a thread
+      operationId: threadsListPosts
+      parameters:
+      - name: thread
+        in: query
+        required: true
+        schema:
+          type: string
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Posts
+components:
+  parameters:
+    ApiKey:
+      name: api_key
+      in: query
+      schema:
+        type: string
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: query
+      name: api_key
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://disqus.com/api/oauth/2.0/authorize/
+          tokenUrl: https://disqus.com/api/oauth/2.0/access_token/
+          scopes:
+            read: Read forums, threads, posts
+            write: Create posts and threads
+            admin: Forum administration

@@ -1,0 +1,73 @@
+openapi: 3.1.0
+info:
+  title: Disqus Public Categories Users API
+  description: REST API for Disqus comments, threads, forums, users, and categories. Read and write operations are authenticated using an API key and secret, with OAuth 2.0 access tokens for user-context operations. All endpoints are served under https://disqus.com/api/3.0/.
+  version: '3.0'
+servers:
+- url: https://disqus.com/api/3.0
+  description: Disqus API v3.0
+security:
+- apiKey: []
+- oauth2: []
+tags:
+- name: Users
+paths:
+  /users/details.json:
+    get:
+      tags:
+      - Users
+      summary: Get user details
+      operationId: usersDetails
+      parameters:
+      - name: user
+        in: query
+        schema:
+          type: string
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: User
+  /users/follow.json:
+    post:
+      tags:
+      - Users
+      summary: Follow a user
+      operationId: usersFollow
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Followed
+  /users/unfollow.json:
+    post:
+      tags:
+      - Users
+      summary: Unfollow a user
+      operationId: usersUnfollow
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Unfollowed
+components:
+  parameters:
+    ApiKey:
+      name: api_key
+      in: query
+      schema:
+        type: string
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: query
+      name: api_key
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://disqus.com/api/oauth/2.0/authorize/
+          tokenUrl: https://disqus.com/api/oauth/2.0/access_token/
+          scopes:
+            read: Read forums, threads, posts
+            write: Create posts and threads
+            admin: Forum administration
