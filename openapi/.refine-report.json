@@ -1,0 +1,22 @@
+{
+  "provider": "disqus",
+  "sources": [
+    "disqus-categories-api-openapi.yml",
+    "disqus-forums-api-openapi.yml",
+    "disqus-posts-api-openapi.yml",
+    "disqus-threads-api-openapi.yml",
+    "disqus-users-api-openapi.yml"
+  ],
+  "outputs": [
+    "disqus-categories-api-openapi.yml",
+    "disqus-forums-api-openapi.yml",
+    "disqus-posts-api-openapi.yml",
+    "disqus-threads-api-openapi.yml",
+    "disqus-users-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
