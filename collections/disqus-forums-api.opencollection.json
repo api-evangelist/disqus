@@ -1,0 +1,226 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Disqus Public Categories Forums API",
+    "version": "3.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Forums",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get forum details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://disqus.com/api/3.0/forums/details.json",
+            "params": [
+              {
+                "name": "forum",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get forum details"
+        },
+        {
+          "info": {
+            "name": "Create a new forum",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://disqus.com/api/3.0/forums/create.json",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Create a new forum"
+        },
+        {
+          "info": {
+            "name": "Update forum details",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://disqus.com/api/3.0/forums/update.json",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Update forum details"
+        },
+        {
+          "info": {
+            "name": "List threads within a forum",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://disqus.com/api/3.0/forums/listThreads.json",
+            "params": [
+              {
+                "name": "forum",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List threads within a forum"
+        },
+        {
+          "info": {
+            "name": "List posts within a forum",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://disqus.com/api/3.0/forums/listPosts.json",
+            "params": [
+              {
+                "name": "forum",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List posts within a forum"
+        },
+        {
+          "info": {
+            "name": "List moderators on a forum",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://disqus.com/api/3.0/forums/listModerators.json",
+            "params": [
+              {
+                "name": "forum",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List moderators on a forum"
+        },
+        {
+          "info": {
+            "name": "Add a moderator to a forum",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://disqus.com/api/3.0/forums/addModerator.json",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Add a moderator to a forum"
+        },
+        {
+          "info": {
+            "name": "Remove a moderator from a forum",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://disqus.com/api/3.0/forums/removeModerator.json",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Remove a moderator from a forum"
+        },
+        {
+          "info": {
+            "name": "Follow a forum",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://disqus.com/api/3.0/forums/follow.json",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Follow a forum"
+        },
+        {
+          "info": {
+            "name": "Unfollow a forum",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://disqus.com/api/3.0/forums/unfollow.json",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Unfollow a forum"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

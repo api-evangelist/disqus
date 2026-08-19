@@ -1,0 +1,139 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Disqus Public Categories Posts API",
+    "version": "3.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Posts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get post details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://disqus.com/api/3.0/posts/details.json",
+            "params": [
+              {
+                "name": "post",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get post details"
+        },
+        {
+          "info": {
+            "name": "Create a post",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://disqus.com/api/3.0/posts/create.json",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Create a post"
+        },
+        {
+          "info": {
+            "name": "List posts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://disqus.com/api/3.0/posts/list.json",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List posts"
+        },
+        {
+          "info": {
+            "name": "Approve posts",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://disqus.com/api/3.0/posts/approve.json",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Approve posts"
+        },
+        {
+          "info": {
+            "name": "Remove posts",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://disqus.com/api/3.0/posts/remove.json",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Remove posts"
+        },
+        {
+          "info": {
+            "name": "Vote on a post",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://disqus.com/api/3.0/posts/vote.json",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Vote on a post"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,108 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Disqus Public Categories Threads API",
+    "version": "3.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Threads",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get thread details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://disqus.com/api/3.0/threads/details.json",
+            "params": [
+              {
+                "name": "thread",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get thread details"
+        },
+        {
+          "info": {
+            "name": "Create a thread",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://disqus.com/api/3.0/threads/create.json",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Create a thread"
+        },
+        {
+          "info": {
+            "name": "List threads",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://disqus.com/api/3.0/threads/list.json",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List threads"
+        },
+        {
+          "info": {
+            "name": "List posts in a thread",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://disqus.com/api/3.0/threads/listPosts.json",
+            "params": [
+              {
+                "name": "thread",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List posts in a thread"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

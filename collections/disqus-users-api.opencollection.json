@@ -1,0 +1,85 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Disqus Public Categories Users API",
+    "version": "3.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Users",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get user details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://disqus.com/api/3.0/users/details.json",
+            "params": [
+              {
+                "name": "user",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get user details"
+        },
+        {
+          "info": {
+            "name": "Follow a user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://disqus.com/api/3.0/users/follow.json",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Follow a user"
+        },
+        {
+          "info": {
+            "name": "Unfollow a user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://disqus.com/api/3.0/users/unfollow.json",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Unfollow a user"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
