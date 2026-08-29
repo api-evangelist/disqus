@@ -130,6 +130,9 @@ apis:
   - type: Request Signing
     url: https://disqus.com/api/docs/signing/
 common:
+  - type: CapabilityMap
+    url: capabilities/disqus-capability-edges.yml
+    name: Disqus Business Capability Map
   - type: AgenticAccess
     url: agentic-access/disqus-agentic-access.yml
   - type: DomainSecurity
