@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Disqus Public Categories Posts API
+  title: Disqus Public Posts API
   description: REST API for Disqus comments, threads, forums, users, and categories. Read and write operations are authenticated using an API key and secret, with OAuth 2.0 access tokens for user-context operations. All endpoints are served under https://disqus.com/api/3.0/.
   version: '3.0'
 servers:

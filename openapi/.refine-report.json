@@ -1,11 +1,7 @@
 {
   "provider": "disqus",
   "sources": [
-    "disqus-categories-api-openapi.yml",
-    "disqus-forums-api-openapi.yml",
-    "disqus-posts-api-openapi.yml",
-    "disqus-threads-api-openapi.yml",
-    "disqus-users-api-openapi.yml"
+    "_original/disqus-openapi.yml"
   ],
   "outputs": [
     "disqus-categories-api-openapi.yml",
@@ -17,6 +13,16 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "disqus-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "disqus-categories-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "disqus-forums-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "disqus-posts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "disqus-threads-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "disqus-users-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
