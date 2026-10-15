@@ -61,7 +61,7 @@
     app_slug: disqus
     beta: false
     builder: unknown (not in the directory record)
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
 - slug: disqus-n8n
   label: n8n
@@ -86,7 +86,7 @@
     node_path: Disqus
     trigger: false
     builder: n8n (built-in node)
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
 - slug: disqus-wordpress-own
   label: WordPress (own)
